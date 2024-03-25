@@ -11,7 +11,9 @@ if (!defined('WPINC')) {
 	die;
 }
 if(!function_exists('_print'))    :
-function _print($data){
+function _print($data, $title=''){
+    if(!empty($title))
+        echo '<h3>' . $title . '</h3>';
     echo '<pre>' . print_r($data, true) . '</pre>';
 }
 endif;
